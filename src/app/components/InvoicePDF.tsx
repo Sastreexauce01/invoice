@@ -124,7 +124,7 @@ const InvoicePDF: React.FC<FacturePDFProps> = ({ invoice, totals }) => {
                             </thead>
                             <tbody>
                                 {invoice.lines.map((ligne, index) => (
-                                    <tr key={index + 1}>
+                                    <tr key={ligne.id}>
                                         <td>{index + 1}</td>
                                         <td>{ligne.description}</td>
                                         <td>{ligne.quantity}</td>

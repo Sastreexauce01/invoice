@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Wrapper from "./components/Wrapper";
 import { Layers } from "lucide-react";
@@ -81,7 +82,9 @@ export default function Home() {
           </div>
           {invoices.length > 0 &&
             invoices.map((invoice, index) => (
-             <InvoiceComponent invoice={invoice} index={index}  />
+             
+             <InvoiceComponent invoice={invoice} index={index}  key={invoice.id} />
+
             ))}
         </div>
 
